@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: source          # The source name used in your dbt models
+    database: HOSPITAL_RAW              # Optional: Your data warehouse database name
+    schema: raw        # Your data warehouse schema name
+    tables:
+      - name: charges           # The exact table name in your warehouse
+        description: Raw client charges data
+        
+      - name: claims
+        description: Raw customer claims data
+
+      - name: patients           # The exact table name in your warehouse
+        description: Raw client patients data
+
+      - name: visits           # The exact table name in your warehouse
+        description: Raw client visits data

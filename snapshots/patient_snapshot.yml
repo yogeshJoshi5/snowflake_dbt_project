@@ -1,0 +1,24 @@
+version: 2
+
+snapshots:
+  - name: patient_snapshot
+
+    relation: ref('bronze_patients')
+    
+
+    config:
+      strategy: check
+      unique_key: patient_id
+      database: BRONZE
+      schema: snapshot
+      check_cols:
+        - insurance_payer_code
+        - city
+        - state
+
+
+      dbt_valid_to_current: "TO_DATE('9999-12-31')"
+
+      snapshot_meta_column_names:
+        dbt_valid_from: start_date
+        dbt_valid_to: end_date
