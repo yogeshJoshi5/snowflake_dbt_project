@@ -1,6 +1,6 @@
 # snowflake_dbt_project
 
-Snowflake Healthcare Analytics Pipeline using dbt
+Snowflake Healthcare Analytics Pipeline using dbt cloud.
 Built a data transformation pipeline using dbt and Snowflake.
 Organized the project into standard dbt components including models, seeds, snapshots, tests, macros, and analyses.
 Used a layered data architecture to transform raw patient/hospital data into cleaner, analytics-ready datasets.
